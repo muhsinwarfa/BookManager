@@ -12,8 +12,10 @@
 
 <p>
   <strong>Publisher:</strong>
-  <%= @book.publisher_id %>
+  <%= @book.publisher.name %>
 </p>
+
+<%= render partial: 'list_of_authors'%>
 
 <%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Back', books_path %>

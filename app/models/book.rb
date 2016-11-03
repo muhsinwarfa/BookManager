@@ -4,6 +4,6 @@ class Book < ActiveRecord::Base
 	has_many :authors, through: :book_authors
 
 	validates :title , presence: true
-	validates :year_published , numericality: {only_integer}
+	validates :year_published , numericality: {:only_integer => true}
 	
 end

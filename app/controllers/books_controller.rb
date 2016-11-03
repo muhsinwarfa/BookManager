@@ -35,6 +35,7 @@ class BooksController < ApplicationController
         format.json { render json: @book.errors, status: :unprocessable_entity }
       end
     end
+    @book.authors = Author.find(params[:author_ids])
   end
 
   # PATCH/PUT /books/1
@@ -49,6 +50,7 @@ class BooksController < ApplicationController
         format.json { render json: @book.errors, status: :unprocessable_entity }
       end
     end
+    @book.authors = Author.find(params[:author_ids])
   end
 
   # DELETE /books/1
